@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.namy {
+    font-size: 25px;
+    padding: 5px;
+}
+.card {
+    display: block;
+    margin: 20px auto;
+/*    box-shadow: 1px 2px 8px 0px black;*/
+    width: 25%;
+    padding: 10px;
+/*    background: cadetblue;*/
+    height: 245px;
+}
+.hide  {
+    display: none !important;
+}
+.google {
+    font-size: 20px;
+    background-color: #dd4b39;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.facebook {
+    font-size: 20px;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.submit {
+    width: 125px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    border-radius: 7px;
+    background: lightpink;;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
