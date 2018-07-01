@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import { applyMiddleware, createStore } from 'redux';
 import { connect } from 'react-redux';
 import './Home.css';
+import { addMessage, getMessages } from '../../actions/messageActions';
 
 
 class Home extends Component {
     state = {
         message: '',
-        messages: []
+    }
+    componentWillMount(){
+        this.props.getMessages();
     }
     onChangeHandler = (e) => {
         this.setState({ message: e.target.value });
     }
     onSubmitHandler = (e) => {
         e.preventDefault();
-        this.setState(state=>({messages: state.messages.concat(state.message), message: ''}));
+        this.props.addMessage(this.state.message);
+        this.setState({message: ''});
     }
     render() {
-        let loadMessage = this.state.messages.map((msg,i)=>(
-            <li key={i}>{msg}</li>
+        let loadMessage = this.props.messages.map((msg,i)=>(
+            <li key={i}>{msg.message}</li>
         ));
         return (
             <div className="container">
@@ -46,4 +49,17 @@ class Home extends Component {
     }
 }
 
-export default Home;
+const mapStateToProps = state => {
+    return {
+        messages: state.messageReducer.messages
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addMessage: (message) => dispatch(addMessage(message)),
+        getMessages: () => dispatch(getMessages())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
