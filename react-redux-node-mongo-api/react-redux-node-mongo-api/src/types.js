@@ -1,3 +1,6 @@
 export const ADD = 'ADD';
 export const RECIEVE_MESSAGE = 'RECIEVE_MESSAGE';
 export const MESSAGE_FAIL = 'MESSAGE_FAIL';
+export const PRODUCTS_START = 'PRODUCT_START';
+export const PRODUCTS_SUCCESS = 'PRODUCT_SUCCESS';
+export const PRODUCTS_FAIL = 'PRODUCT_FAIL';
