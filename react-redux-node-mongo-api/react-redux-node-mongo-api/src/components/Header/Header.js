@@ -3,12 +3,30 @@ import { Link } from 'react-router-dom';
 import Moment from 'moment';
 
 class Header extends Component {
-    state = {}
-    render() {
+    state = {
+        currentTime: ''
+    }
+
+    componentDidMount() {
+        var intervalId = setInterval(this.timer, 1000);
+        // store intervalId in the state so it can be accessed later:
+        this.setState({intervalId: intervalId});
+     }
+     
+     componentWillUnmount() {
+        // use intervalId from the state to clear the interval
+        clearInterval(this.state.intervalId);
+     }
+     
+     timer =()=> {
+        // setState method is used to update the state
         const dateTime = new Date()
-        //Moment.locale('tr') //For Turkey
-        const formattedDT = Moment(dateTime).format('LLL')//20 Mart 2017
-        // return (<div> {formattedDT} </div>)
+        const formattedDT = Moment(dateTime).format('LTS')//20 Mart 2017
+        this.setState({ currentTime: formattedDT});
+     }
+
+    render() {
+        
         return (
             <header>
                 <div className="container-menu-desktop">
@@ -56,9 +74,11 @@ class Header extends Component {
 
                             <div className="wrap-icon-header flex-w flex-r-m">
                                 <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+                                    {this.state.currentTime}
+                                </div>
+                                <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
                                     <i className="zmdi zmdi-search"></i>
                                 </div>
-
                                 <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
                                     <i className="zmdi zmdi-shopping-cart"></i>
                                 </div>
@@ -66,7 +86,7 @@ class Header extends Component {
                                 <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
                                     <i className="zmdi zmdi-favorite-outline"></i>
                                 </a>
-                                {formattedDT}
+                               
                             </div>
                         </nav>
                     </div>
