@@ -23,17 +23,17 @@ const product = props => {
 							// </Link>
 			// 			</div>
 			// </div>
-            <div class="col-lg-4 mb-4">
-            <div class="card h-100">
+            <div className="col-lg-4 mb-4">
+            <div className="card h-100">
             
               {/* <h4 class="card-header">{props.productName}</h4> */}
               <Link to="/shop">
-              <img src="images/banner-01.jpg"  class="card-img-top" alt="IMG-BANNER" />
-              <div class="card-body">
-                <p class="card-text">{props.productName}</p>
+              <img src="images/banner-01.jpg"  className="card-img-top" alt="IMG-BANNER" />
+              <div className="card-body">
+                <p className="card-text">{props.productName}</p>
               </div>
-              <div class="card-footer">
-                <a href="#" class="btn btn-primary">Shop Now</a>
+              <div className="card-footer">
+                <button className="btn btn-primary">Shop Now</button>
               </div>
               </Link>
             </div>

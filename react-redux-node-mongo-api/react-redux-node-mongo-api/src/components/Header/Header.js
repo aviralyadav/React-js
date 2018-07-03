@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Moment from 'moment';
 
 class Header extends Component {
     state = {}
     render() {
+        const dateTime = new Date()
+        //Moment.locale('tr') //For Turkey
+        const formattedDT = Moment(dateTime).format('LLL')//20 Mart 2017
+        // return (<div> {formattedDT} </div>)
         return (
             <header>
                 <div className="container-menu-desktop">
@@ -12,7 +17,8 @@ class Header extends Component {
                         <nav className="limiter-menu-desktop container">
 
                             <Link to="/" className="logo">
-                                <img src="images/icons/logo-01.png" alt="IMG-LOGO" />
+                                <h3>HAMARA STORE</h3>
+                                {/* <img src="images/icons/logo-01.png" alt="IMG-LOGO" /> */}
                             </Link>
 
                             <div className="menu-desktop">
@@ -60,6 +66,7 @@ class Header extends Component {
                                 <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
                                     <i className="zmdi zmdi-favorite-outline"></i>
                                 </a>
+                                {formattedDT}
                             </div>
                         </nav>
                     </div>
@@ -168,6 +175,7 @@ class Header extends Component {
                             </button>
                             <input className="plh3" type="text" name="search" placeholder="Search..." />
                         </form>
+                        
                     </div>
                 </div>
             </header>
