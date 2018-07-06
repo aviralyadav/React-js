@@ -12,3 +12,11 @@ export const SET_INDEX = 'set_index';
 
 /* Settings */
 export const TOGGLE_SETTING = 'toggle_setting';
+
+export const SET_SIGNUP_PENDING = 'SET_SIGNUP_PENDING';
+export const SET_SIGNUP_SUCCESS = 'SET_SIGNUP_SUCCESS';
+export const SET_SIGNUP_FAIL = 'SET_SIGNUP_FAIL';
+
+export const SET_LOGIN_PENDING = 'SET_LOGIN_PENDING';
+export const SET_LOGIN_SUCCESS = 'SET_LOGIN_SUCCESS';
+export const SET_LOGIN_ERROR = 'SET_LOGIN_ERROR';

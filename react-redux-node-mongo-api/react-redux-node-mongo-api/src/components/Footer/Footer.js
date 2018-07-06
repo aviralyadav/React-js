@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     state = {  }
@@ -14,27 +15,27 @@ class Footer extends Component {
     
                         <ul>
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Women
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Men
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Shoes
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Watches
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -46,27 +47,27 @@ class Footer extends Component {
     
                         <ul>
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Track Order
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Returns 
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     Shipping
-                                </a>
+                                </Link>
                             </li>
     
                             <li className="p-b-10">
-                                <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
+                                <Link to="/" className="stext-107 cl7 hov-cl1 trans-04">
                                     FAQs
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -81,17 +82,17 @@ class Footer extends Component {
                         </p>
     
                         <div className="p-t-27">
-                            <a href="#" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <Link to="/" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                                 <i className="fa fa-facebook"></i>
-                            </a>
+                            </Link>
     
-                            <a href="#" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <Link to="/" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                                 <i className="fa fa-instagram"></i>
-                            </a>
+                            </Link>
     
-                            <a href="#" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <Link to="/" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                                 <i className="fa fa-pinterest-p"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
     
@@ -117,25 +118,25 @@ class Footer extends Component {
     
                 <div className="p-t-40">
                     <div className="flex-c-m flex-w p-b-18">
-                        <a href="#" className="m-all-1">
+                        <Link to="/" className="m-all-1">
                             <img src="images/icons/icon-pay-01.png" alt="ICON-PAY"/>
-                        </a>
+                        </Link>
     
-                        <a href="#" className="m-all-1">
+                        <Link to="/" className="m-all-1">
                             <img src="images/icons/icon-pay-02.png" alt="ICON-PAY"/>
-                        </a>
+                        </Link>
     
-                        <a href="#" className="m-all-1">
+                        <Link to="/" className="m-all-1">
                             <img src="images/icons/icon-pay-03.png" alt="ICON-PAY"/>
-                        </a>
+                        </Link>
     
-                        <a href="#" className="m-all-1">
+                        <Link to="/" className="m-all-1">
                             <img src="images/icons/icon-pay-04.png" alt="ICON-PAY"/>
-                        </a>
+                        </Link>
     
-                        <a href="#" className="m-all-1">
+                        <Link to="/" className="m-all-1">
                             <img src="images/icons/icon-pay-05.png" alt="ICON-PAY"/>
-                        </a>
+                        </Link>
                     </div>
     
                     <p className="stext-107 cl6 txt-center">

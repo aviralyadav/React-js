@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+// import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 import './index.css';
 import App from './App';
@@ -16,9 +17,12 @@ import Contact from './components/Contact/Contact';
 import Cart from './components/Products/Cart/Cart';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Signup from './components/Auth/Signup/Signup';
+import Signin from './components/Auth/Signin/Signin';
+import Dashboard from './components/Dashboard/Dashboard';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-const history = createBrowserHistory();
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+// const history = createBrowserHistory();
 
 ReactDOM.render(
     <Provider store={store} >
@@ -31,6 +35,9 @@ ReactDOM.render(
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/cart" component={Cart} />
+                <Route path="/signin" component={Signin} />
+                <Route path="/signup" component={Signup} />
+                <Route path="/dashboard" component={Dashboard} />
                 <Footer />
             </div>
         </Router>

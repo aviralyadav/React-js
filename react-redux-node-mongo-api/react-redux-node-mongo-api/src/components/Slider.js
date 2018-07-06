@@ -41,12 +41,12 @@ class Slider extends Component {
 
   render() {
     console.log(this.props.images);
-    const { settingsVisible, autoplay } = this.state
+    // const { settingsVisible, autoplay } = this.state
     const {
-      images,
-      index,
+      // images,
+      // index,
       translateValue,
-      showDots,
+      // showDots,
       coolButtons
     } = this.props
 

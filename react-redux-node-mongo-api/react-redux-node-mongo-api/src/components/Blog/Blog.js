@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../About/About.css';
 
 class Blog extends Component {
@@ -7,10 +8,10 @@ class Blog extends Component {
         return (
             <div>
                 {/* <!-- Title page --> */}
-                <section className="bg-img1 txt-center p-lr-15 p-tb-92 " style={{'backgroundImage': "url('images/bg-02.jpg')"}}>
+                <section className="bg-img1 txt-center p-lr-15 p-tb-92 " style={{ 'backgroundImage': "url('images/bg-02.jpg')" }}>
                     <h2 className="ltext-105 cl0 txt-center">
                         Blog
-		</h2>
+		            </h2>
                 </section>
 
 
@@ -22,30 +23,30 @@ class Blog extends Component {
                                 <div className="p-r-45 p-r-0-lg">
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
-                                        <a href="blog-detail.html" className="hov-img0 how-pos5-parent">
+                                        <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
                                             <img src="images/blog-04.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
                                                 <span className="ltext-107 cl2 txt-center">
                                                     22
-									</span>
+									            </span>
 
                                                 <span className="stext-109 cl3 txt-center">
                                                     Jan 2018
-									</span>
+									            </span>
                                             </div>
-                                        </a>
+                                        </Link>
 
                                         <div className="p-t-32">
                                             <h4 className="p-b-15">
-                                                <a href="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
+                                                <Link to="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
                                                     8 Inspiring Ways to Wear Dresses in the Winter
-									</a>
+									            </Link>
                                             </h4>
 
                                             <p className="stext-117 cl6">
                                                 ClassName aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
+								            </p>
 
                                             <div className="flex-w flex-sb-m p-t-18">
                                                 <span className="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
@@ -61,21 +62,21 @@ class Blog extends Component {
 
                                                     <span>
                                                         8 Comments
-										</span>
+										            </span>
                                                 </span>
 
-                                                <a href="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
+                                                <Link to="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
                                                     Continue Reading
-            
+
 										<i className="fa fa-long-arrow-right m-l-9"></i>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
-                                        <a href="blog-detail.html" className="hov-img0 how-pos5-parent">
+                                        <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
                                             <img src="images/blog-05.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
@@ -87,18 +88,18 @@ class Blog extends Component {
                                                     Jan 2018
 									</span>
                                             </div>
-                                        </a>
+                                        </Link>
 
                                         <div className="p-t-32">
                                             <h4 className="p-b-15">
-                                                <a href="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
+                                                <Link to="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
                                                     The Great Big List of Men’s Gifts for the Holidays
-									</a>
+									            </Link>
                                             </h4>
 
                                             <p className="stext-117 cl6">
                                                 ClassName aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
+								            </p>
 
                                             <div className="flex-w flex-sb-m p-t-18">
                                                 <span className="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
@@ -117,18 +118,18 @@ class Blog extends Component {
 										</span>
                                                 </span>
 
-                                                <a href="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
+                                                <Link to="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
                                                     Continue Reading
-            
+
 										<i className="fa fa-long-arrow-right m-l-9"></i>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
-                                        <a href="blog-detail.html" className="hov-img0 how-pos5-parent">
+                                        <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
                                             <img src="images/blog-06.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
@@ -140,13 +141,13 @@ class Blog extends Component {
                                                     Jan 2018
 									</span>
                                             </div>
-                                        </a>
+                                        </Link>
 
                                         <div className="p-t-32">
                                             <h4 className="p-b-15">
-                                                <a href="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
+                                                <Link to="blog-detail.html" className="ltext-108 cl2 hov-cl1 trans-04">
                                                     5 Winter-to-Spring Fashion Trends to Try Now
-									</a>
+									</Link>
                                             </h4>
 
                                             <p className="stext-117 cl6">
@@ -170,24 +171,24 @@ class Blog extends Component {
 										</span>
                                                 </span>
 
-                                                <a href="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
+                                                <Link to="blog-detail.html" className="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
                                                     Continue Reading
-            
+
 										<i className="fa fa-long-arrow-right m-l-9"></i>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* <!-- Pagination --> */}
                                     <div className="flex-l-m flex-w w-full p-t-10 m-lr--7">
-                                        <a href="#" className="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
+                                        <Link to="/" className="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
                                             1
-							</a>
+							</Link>
 
-                                        <a href="#" className="flex-c-m how-pagination1 trans-04 m-all-7">
+                                        <Link to="/" className="flex-c-m how-pagination1 trans-04 m-all-7">
                                             2
-							</a>
+							</Link>
                                     </div>
                                 </div>
                             </div>
@@ -209,33 +210,33 @@ class Blog extends Component {
 
                                         <ul>
                                             <li className="bor18">
-                                                <a href="#" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                                <Link to="/" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                                                     Fashion
-									</a>
+									</Link>
                                             </li>
 
                                             <li className="bor18">
-                                                <a href="#" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                                <Link to="/" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                                                     Beauty
-									</a>
+									</Link>
                                             </li>
 
                                             <li className="bor18">
-                                                <a href="#" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                                <Link to="/" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                                                     Street Style
-									</a>
+									</Link>
                                             </li>
 
                                             <li className="bor18">
-                                                <a href="#" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                                <Link to="/" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                                                     Life Style
-									</a>
+									</Link>
                                             </li>
 
                                             <li className="bor18">
-                                                <a href="#" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                                <Link to="/" className="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
                                                     DIY & Crafts
-									</a>
+									</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -247,14 +248,14 @@ class Blog extends Component {
 
                                         <ul>
                                             <li className="flex-w flex-t p-b-30">
-                                                <a href="#" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+                                                <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
                                                     <img src="images/product-min-01.jpg" alt="PRODUCT" />
-                                                </a>
+                                                </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">
-                                                    <a href="#" className="stext-116 cl8 hov-cl1 trans-04">
+                                                    <Link to="/" className="stext-116 cl8 hov-cl1 trans-04">
                                                         White Shirt With Pleat Detail Back
-										</a>
+										</Link>
 
                                                     <span className="stext-116 cl6 p-t-20">
                                                         $19.00
@@ -263,14 +264,14 @@ class Blog extends Component {
                                             </li>
 
                                             <li className="flex-w flex-t p-b-30">
-                                                <a href="#" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+                                                <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
                                                     <img src="images/product-min-02.jpg" alt="PRODUCT" />
-                                                </a>
+                                                </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">
-                                                    <a href="#" className="stext-116 cl8 hov-cl1 trans-04">
+                                                    <Link to="/" className="stext-116 cl8 hov-cl1 trans-04">
                                                         Converse All Star Hi Black Canvas
-										</a>
+										</Link>
 
                                                     <span className="stext-116 cl6 p-t-20">
                                                         $39.00
@@ -279,14 +280,14 @@ class Blog extends Component {
                                             </li>
 
                                             <li className="flex-w flex-t p-b-30">
-                                                <a href="#" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+                                                <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
                                                     <img src="images/product-min-03.jpg" alt="PRODUCT" />
-                                                </a>
+                                                </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">
-                                                    <a href="#" className="stext-116 cl8 hov-cl1 trans-04">
+                                                    <Link to="/" className="stext-116 cl8 hov-cl1 trans-04">
                                                         Nixon Porter Leather Watch In Tan
-										</a>
+										</Link>
 
                                                     <span className="stext-116 cl6 p-t-20">
                                                         $17.00
@@ -303,7 +304,7 @@ class Blog extends Component {
 
                                         <ul>
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         July 2018
 										</span>
@@ -311,11 +312,11 @@ class Blog extends Component {
                                                     <span>
                                                         (9)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         June 2018
 										</span>
@@ -323,11 +324,11 @@ class Blog extends Component {
                                                     <span>
                                                         (39)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         May 2018
 										</span>
@@ -335,11 +336,11 @@ class Blog extends Component {
                                                     <span>
                                                         (29)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         April  2018
 										</span>
@@ -347,11 +348,11 @@ class Blog extends Component {
                                                     <span>
                                                         (35)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         March 2018
 										</span>
@@ -359,11 +360,11 @@ class Blog extends Component {
                                                     <span>
                                                         (22)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         February 2018
 										</span>
@@ -371,11 +372,11 @@ class Blog extends Component {
                                                     <span>
                                                         (32)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         January 2018
 										</span>
@@ -383,11 +384,11 @@ class Blog extends Component {
                                                     <span>
                                                         (21)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
 
                                             <li className="p-b-7">
-                                                <a href="#" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+                                                <Link to="/" className="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
                                                     <span>
                                                         December 2017
 										</span>
@@ -395,7 +396,7 @@ class Blog extends Component {
                                                     <span>
                                                         (26)
 										</span>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -406,25 +407,25 @@ class Blog extends Component {
 							</h4>
 
                                         <div className="flex-w m-r--5">
-                                            <a href="#" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                            <Link to="/" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
                                                 Fashion
-								</a>
+								</Link>
 
-                                            <a href="#" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                            <Link to="/" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
                                                 Lifestyle
-								</a>
+								</Link>
 
-                                            <a href="#" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                            <Link to="/" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
                                                 Denim
-								</a>
+								</Link>
 
-                                            <a href="#" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                            <Link to="/" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
                                                 Streetstyle
-								</a>
+								</Link>
 
-                                            <a href="#" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                            <Link to="/" className="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
                                                 Crafts
-								</a>
+								</Link>
                                         </div>
                                     </div>
                                 </div>

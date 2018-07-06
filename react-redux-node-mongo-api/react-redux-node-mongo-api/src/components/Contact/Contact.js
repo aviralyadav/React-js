@@ -10,7 +10,7 @@ class Contact extends Component {
                 <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{'backgroundImage': "url('images/bg-01.jpg')"}}>
                     <h2 className="ltext-105 cl0 txt-center">
                         Contact
-		</h2>
+		            </h2>
                 </section>
 
 
@@ -22,7 +22,7 @@ class Contact extends Component {
                                 <form>
                                     <h4 className="mtext-105 cl2 txt-center p-b-30">
                                         Send Us A Message
-						</h4>
+						            </h4>
 
                                     <div className="bor8 m-b-20 how-pos4-parent">
                                         <input className="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address" />
@@ -35,7 +35,7 @@ class Contact extends Component {
 
                                     <button className="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
                                         Submit
-						</button>
+						            </button>
                                 </form>
                             </div>
 

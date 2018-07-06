@@ -4,7 +4,8 @@ import Moment from 'moment';
 
 class Header extends Component {
     state = {
-        currentTime: ''
+        currentTime: '',
+        intervalId:''
     }
 
     componentDidMount() {
@@ -69,10 +70,16 @@ class Header extends Component {
                                     <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>
+                                    <li>
+                                        <Link to="/signup">Register</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/signin">Login</Link>
+                                    </li>
                                 </ul>
                             </div>
 
-                            <div className="wrap-icon-header flex-w flex-r-m">
+                            {/* <div className="wrap-icon-header flex-w flex-r-m">
                                 <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
                                     {this.state.currentTime}
                                 </div>
@@ -87,12 +94,12 @@ class Header extends Component {
                                     <i className="zmdi zmdi-favorite-outline"></i>
                                 </a>
                                
-                            </div>
+                            </div> */}
                         </nav>
                     </div>
                 </div>
 
-                <div className="wrap-header-mobile">
+                {/* <div className="wrap-header-mobile">
                     <div className="logo-mobile">
                         <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO" /></a>
                     </div>
@@ -116,10 +123,10 @@ class Header extends Component {
                             <span className="hamburger-inner"></span>
                         </span>
                     </div>
-                </div>
+                </div> */}
 
 
-                <div className="menu-mobile">
+                {/* <div className="menu-mobile">
                     <ul className="topbar-mobile">
                         <li>
                             <div className="left-top-bar">
@@ -181,7 +188,7 @@ class Header extends Component {
                             <a href="contact.html">Contact</a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
 
                 <div className="modal-search-header flex-c-m trans-04 js-hide-modal-search">
                     <div className="container-search-header">
