@@ -15,15 +15,14 @@ class Signup extends Component {
             [e.target.name]: e.target.value
         });
     }
+    
     onSignup = async (e) => {
         e.preventDefault();
-        console.log(this.state);
-        await this.props.onSignupUser(this.state);
-        console.log(this.props.isSignupSuccess);
-        if(this.props.isSignupSuccess) {
+         await this.props.onSignupUser(this.state);
+         if(this.props.isSignupSuccess) {
             this.props.history.push('/dashboard');
-        }
-    }
+         }
+    };
     render() {
         const { isSignupPending, isSignupSuccess, loginError } = this.props;
         

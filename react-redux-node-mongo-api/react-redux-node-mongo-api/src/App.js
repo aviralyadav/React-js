@@ -1,3 +1,4 @@
+//@flow
 import React, { Component } from 'react';
 import Slider from './components/Slider';
 import 'react-rangeslider/lib/index.css';
@@ -16,7 +17,7 @@ class App extends Component {
       <div className="App">
 
         {/* <Header /> */}
-
+        {/* <Test str={'avi'} /> */}
         {/* slider */}
         <Slider />
 

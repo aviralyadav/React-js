@@ -20,8 +20,9 @@ import Footer from './components/Footer/Footer';
 import Signup from './components/Auth/Signup/Signup';
 import Signin from './components/Auth/Signin/Signin';
 import Dashboard from './components/Dashboard/Dashboard';
+import Signout from './components/Auth/Signout';
 
-const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 // const history = createBrowserHistory();
 
 ReactDOM.render(
@@ -37,6 +38,7 @@ ReactDOM.render(
                 <Route path="/cart" component={Cart} />
                 <Route path="/signin" component={Signin} />
                 <Route path="/signup" component={Signup} />
+                <Route path="/signout" component={Signout} />
                 <Route path="/dashboard" component={Dashboard} />
                 <Footer />
             </div>

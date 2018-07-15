@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Moment from 'moment';
+import { connect } from 'react-redux';
+import { signout } from '../../actions/authActions';
 
 class Header extends Component {
     state = {
         currentTime: '',
-        intervalId:''
+        intervalId: '',
+        token: ''
     }
 
     componentDidMount() {
+        // this.checkToken();
         var intervalId = setInterval(this.timer, 1000);
         // store intervalId in the state so it can be accessed later:
-        this.setState({intervalId: intervalId});
-     }
-     
-     componentWillUnmount() {
-        // use intervalId from the state to clear the interval
-        clearInterval(this.state.intervalId);
-     }
-     
-     timer =()=> {
+        this.setState({ intervalId: intervalId });
+    }
+
+    signout  = () => {
+        this.props.signout();
+         //this.props.history.push('/');
+    }
+
+
+    timer = () => {
         // setState method is used to update the state
         const dateTime = new Date()
         const formattedDT = Moment(dateTime).format('LTS')//20 Mart 2017
-        this.setState({ currentTime: formattedDT});
-     }
+        this.setState({ currentTime: formattedDT });
+    }
 
     render() {
-        
+
         return (
             <header>
                 <div className="container-menu-desktop">
@@ -70,125 +75,26 @@ class Header extends Component {
                                     <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>
-                                    <li>
-                                        <Link to="/signup">Register</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/signin">Login</Link>
-                                    </li>
+                                    {localStorage.getItem('token') ?
+                                        <li>
+                                            <Link to="" onClick={this.signout}>Sign Out</Link>
+                                        </li> : null}
+                                    {localStorage.getItem('token') ? null :
+                                        <li>
+                                            <Link to="/signup">Sign Up</Link>
+                                        </li>}
+                                    {localStorage.getItem('token') ? null :
+                                        <li>
+                                            <Link to="/signin">Sign In</Link>
+                                        </li>}
                                 </ul>
                             </div>
 
-                            {/* <div className="wrap-icon-header flex-w flex-r-m">
-                                <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                                    {this.state.currentTime}
-                                </div>
-                                <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                                    <i className="zmdi zmdi-search"></i>
-                                </div>
-                                <div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-                                    <i className="zmdi zmdi-shopping-cart"></i>
-                                </div>
 
-                                <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
-                                    <i className="zmdi zmdi-favorite-outline"></i>
-                                </a>
-                               
-                            </div> */}
                         </nav>
                     </div>
                 </div>
 
-                {/* <div className="wrap-header-mobile">
-                    <div className="logo-mobile">
-                        <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO" /></a>
-                    </div>
-
-                    <div className="wrap-icon-header flex-w flex-r-m m-r-15">
-                        <div className="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-                            <i className="zmdi zmdi-search"></i>
-                        </div>
-
-                        <div className="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-                            <i className="zmdi zmdi-shopping-cart"></i>
-                        </div>
-
-                        <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-                            <i className="zmdi zmdi-favorite-outline"></i>
-                        </a>
-                    </div>
-
-                    <div className="btn-show-menu-mobile hamburger hamburger--squeeze">
-                        <span className="hamburger-box">
-                            <span className="hamburger-inner"></span>
-                        </span>
-                    </div>
-                </div> */}
-
-
-                {/* <div className="menu-mobile">
-                    <ul className="topbar-mobile">
-                        <li>
-                            <div className="left-top-bar">
-                                Free shipping for standard order over $100
-					</div>
-                        </li>
-
-                        <li>
-                            <div className="right-top-bar flex-w h-full">
-                                <a href="#" className="flex-c-m p-lr-10 trans-04">
-                                    Help & FAQs
-						</a>
-
-                                <a href="#" className="flex-c-m p-lr-10 trans-04">
-                                    My Account
-						</a>
-
-                                <a href="#" className="flex-c-m p-lr-10 trans-04">
-                                    EN
-						</a>
-
-                                <a href="#" className="flex-c-m p-lr-10 trans-04">
-                                    USD
-						</a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <ul className="main-menu-m">
-                        <li>
-                            <a href="index.html">Home</a>
-                            <ul className="sub-menu-m">
-                                <li><a href="index.html">Homepage 1</a></li>
-                                <li><a href="home-02.html">Homepage 2</a></li>
-                                <li><a href="home-03.html">Homepage 3</a></li>
-                            </ul>
-                            <span className="arrow-main-menu-m">
-                                <i className="fa fa-angle-right" aria-hidden="true"></i>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="product.html">Shop</a>
-                        </li>
-
-                        <li>
-                            <a href="shoping-cart.html" className="label1 rs1" data-label1="hot">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div> */}
 
                 <div className="modal-search-header flex-c-m trans-04 js-hide-modal-search">
                     <div className="container-search-header">
@@ -202,7 +108,7 @@ class Header extends Component {
                             </button>
                             <input className="plh3" type="text" name="search" placeholder="Search..." />
                         </form>
-                        
+
                     </div>
                 </div>
             </header>
@@ -210,4 +116,16 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        authenticated: state.authReducer.authenticated
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        signout: () => dispatch(signout())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
