@@ -4,7 +4,16 @@ import './App.css';
 import logo from './logo.svg';
 
 class App extends React.Component {
+  public state = {
+    age:'',
+    name: ''
+  }
+  public getName (age: number, name: string) {
+    return `${name} is ${age} years old.`;
+  }
+
   public render() {
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -12,8 +21,9 @@ class App extends React.Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+        {this.getName(25, 'Avi')}
         </p>
+        
       </div>
     );
   }
