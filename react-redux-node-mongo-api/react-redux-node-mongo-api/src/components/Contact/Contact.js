@@ -7,7 +7,7 @@ class Contact extends Component {
         return (
             <div>
                 {/*<!-- Title page -->*/}
-                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{'backgroundImage': "url('images/bg-01.jpg')"}}>
+                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{'backgroundImage': "url('images/products/bg-01.jpg')"}}>
                     <h2 className="ltext-105 cl0 txt-center">
                         Contact
 		            </h2>
@@ -26,7 +26,7 @@ class Contact extends Component {
 
                                     <div className="bor8 m-b-20 how-pos4-parent">
                                         <input className="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address" />
-                                        <img className="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON" />
+                                        <img className="how-pos4 pointer-none" src="images/products/icons/icon-email.png" alt="ICON" />
                                     </div>
 
                                     <div className="bor8 m-b-30">
@@ -95,7 +95,7 @@ class Contact extends Component {
 
                 {/*-- Map -->*/}
                 <div className="map">
-                    <div className="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
+                    <div className="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/products/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
                 </div>
             </div>
         );

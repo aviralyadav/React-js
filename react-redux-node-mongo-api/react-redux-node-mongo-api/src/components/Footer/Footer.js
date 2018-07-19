@@ -119,23 +119,23 @@ class Footer extends Component {
                 <div className="p-t-40">
                     <div className="flex-c-m flex-w p-b-18">
                         <Link to="/" className="m-all-1">
-                            <img src="images/icons/icon-pay-01.png" alt="ICON-PAY"/>
+                            <img src="images/products/icons/icon-pay-01.png" alt="ICON-PAY"/>
                         </Link>
     
                         <Link to="/" className="m-all-1">
-                            <img src="images/icons/icon-pay-02.png" alt="ICON-PAY"/>
+                            <img src="images/products/icons/icon-pay-02.png" alt="ICON-PAY"/>
                         </Link>
     
                         <Link to="/" className="m-all-1">
-                            <img src="images/icons/icon-pay-03.png" alt="ICON-PAY"/>
+                            <img src="images/products/icons/icon-pay-03.png" alt="ICON-PAY"/>
                         </Link>
     
                         <Link to="/" className="m-all-1">
-                            <img src="images/icons/icon-pay-04.png" alt="ICON-PAY"/>
+                            <img src="images/products/icons/icon-pay-04.png" alt="ICON-PAY"/>
                         </Link>
     
                         <Link to="/" className="m-all-1">
-                            <img src="images/icons/icon-pay-05.png" alt="ICON-PAY"/>
+                            <img src="images/products/icons/icon-pay-05.png" alt="ICON-PAY"/>
                         </Link>
                     </div>
     

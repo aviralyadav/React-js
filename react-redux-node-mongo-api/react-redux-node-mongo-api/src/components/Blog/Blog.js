@@ -8,7 +8,7 @@ class Blog extends Component {
         return (
             <div>
                 {/* <!-- Title page --> */}
-                <section className="bg-img1 txt-center p-lr-15 p-tb-92 " style={{ 'backgroundImage': "url('images/bg-02.jpg')" }}>
+                <section className="bg-img1 txt-center p-lr-15 p-tb-92 " style={{ 'backgroundImage': "url('images/products/bg-02.jpg')" }}>
                     <h2 className="ltext-105 cl0 txt-center">
                         Blog
 		            </h2>
@@ -24,7 +24,7 @@ class Blog extends Component {
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
                                         <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
-                                            <img src="images/blog-04.jpg" alt="IMG-BLOG" />
+                                            <img src="images/products/blog-04.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
                                                 <span className="ltext-107 cl2 txt-center">
@@ -77,7 +77,7 @@ class Blog extends Component {
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
                                         <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
-                                            <img src="images/blog-05.jpg" alt="IMG-BLOG" />
+                                            <img src="images/products/blog-05.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
                                                 <span className="ltext-107 cl2 txt-center">
@@ -130,7 +130,7 @@ class Blog extends Component {
                                     {/* <!-- item blog --> */}
                                     <div className="p-b-63">
                                         <Link to="blog-detail.html" className="hov-img0 how-pos5-parent">
-                                            <img src="images/blog-06.jpg" alt="IMG-BLOG" />
+                                            <img src="images/products/blog-06.jpg" alt="IMG-BLOG" />
 
                                             <div className="flex-col-c-m size-123 bg9 how-pos5">
                                                 <span className="ltext-107 cl2 txt-center">
@@ -249,7 +249,7 @@ class Blog extends Component {
                                         <ul>
                                             <li className="flex-w flex-t p-b-30">
                                                 <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                                    <img src="images/product-min-01.jpg" alt="PRODUCT" />
+                                                    <img src="images/products/product-min-01.jpg" alt="PRODUCT" />
                                                 </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">
@@ -265,7 +265,7 @@ class Blog extends Component {
 
                                             <li className="flex-w flex-t p-b-30">
                                                 <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                                    <img src="images/product-min-02.jpg" alt="PRODUCT" />
+                                                    <img src="images/products/product-min-02.jpg" alt="PRODUCT" />
                                                 </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">
@@ -281,7 +281,7 @@ class Blog extends Component {
 
                                             <li className="flex-w flex-t p-b-30">
                                                 <Link to="/" className="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                                    <img src="images/product-min-03.jpg" alt="PRODUCT" />
+                                                    <img src="images/products/product-min-03.jpg" alt="PRODUCT" />
                                                 </Link>
 
                                                 <div className="size-215 flex-col-t p-t-8">

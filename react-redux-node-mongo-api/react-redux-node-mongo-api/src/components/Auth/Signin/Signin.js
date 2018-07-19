@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { createBrowserHistory } from 'history';
+// import { createBrowserHistory } from 'history';
 
 import {onLoginUser} from '../../../actions/authActions';
-const history = createBrowserHistory();
+import {getErrorState, getLoginSuccessState, getLoginPendingState} from '../Selectors/AuthSelector';
+// const history = createBrowserHistory();
 
 class Signin extends Component {
     state = {
@@ -28,7 +29,7 @@ class Signin extends Component {
         
         return (
             <div>
-                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{ 'backgroundImage': "url('images/bg-01.jpg')" }}>
+                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{ 'backgroundImage': "url('images/products/bg-01.jpg')" }}>
                     <h2 className="ltext-105 cl0 txt-center">
                         Login
 		            </h2>
@@ -60,11 +61,12 @@ class Signin extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
+    // console.log(state);
     return {
-        isLoginPending: state.authReducer.isLoginPending,
-        isLoginSuccess: state.authReducer.isLoginSuccess,
-        loginError: state.authReducer.loginError
+        isLoginPending: getLoginPendingState(state),
+        isLoginSuccess: getLoginSuccessState(state),
+        loginError: getErrorState(state)
     }
 }
 

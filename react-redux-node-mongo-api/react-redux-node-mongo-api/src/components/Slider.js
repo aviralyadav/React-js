@@ -40,7 +40,7 @@ class Slider extends Component {
   toggleAutoplay = () => this.setState({ autoplay: !this.state.autoplay })
 
   render() {
-    console.log(this.props.images);
+    // console.log(this.props.images);
     // const { settingsVisible, autoplay } = this.state
     const {
       // images,

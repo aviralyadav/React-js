@@ -7,7 +7,7 @@ class About extends Component {
         return (
             <div>
                 {/* <!-- Title page --> */}
-                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{'backgroundImage': "url('images/bg-01.jpg')"}}>
+                <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{'backgroundImage': "url('images/products/bg-01.jpg')"}}>
                     <h2 className="ltext-105 cl0 txt-center">
                         About
 		            </h2>
@@ -41,7 +41,7 @@ class About extends Component {
                             <div className="col-11 col-md-5 col-lg-4 m-lr-auto">
                                 <div className="how-bor1 ">
                                     <div className="hov-img0">
-                                        <img src="images/about-01.jpg" alt="IMG" />
+                                        <img src="images/products/about-01.jpg" alt="IMG" />
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ class About extends Component {
                             <div className="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
                                 <div className="how-bor2">
                                     <div className="hov-img0">
-                                        <img src="images/about-02.jpg" alt="IMG" />
+                                        <img src="images/products/about-02.jpg" alt="IMG" />
                                     </div>
                                 </div>
                             </div>

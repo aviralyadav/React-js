@@ -8,7 +8,7 @@ const product = props => {
 
 				{/* <h4 class="card-header">{props.productName}</h4> */}
 				<Link to="/shop">
-					<img src="images/gallery-02.jpg" className="card-img-top" alt="IMG-BANNER" />
+					<img src="images/products/gallery-02.jpg" className="card-img-top" alt="IMG-BANNER" />
 					<div className="card-body">
 						<p className="card-text">{props.productName}</p>
 					</div>

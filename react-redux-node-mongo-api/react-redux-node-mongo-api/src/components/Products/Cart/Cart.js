@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import queryString from 'query-string';
+
 
 class Cart extends Component {
     state = {}
+    componentDidMount () {
+        const parsed = queryString.parse(this.props.location.search);
+        console.log(parsed.id, parsed.name);
+    }
     render() {
         return (
             <div>
@@ -15,7 +21,7 @@ class Cart extends Component {
 
                         <span className="stext-109 cl4">
                             Shoping Cart
-			</span>
+			            </span>
                     </div>
                 </div>
 
@@ -28,6 +34,7 @@ class Cart extends Component {
                                 <div className="m-l-25 m-r--38 m-lr-0-xl">
                                     <div className="wrap-table-shopping-cart">
                                         <table className="table-shopping-cart">
+                                        <tbody>
                                             <tr className="table_head">
                                                 <th className="column-1">Product</th>
                                                 <th className="column-2"></th>
@@ -39,7 +46,7 @@ class Cart extends Component {
                                             <tr className="table_row">
                                                 <td className="column-1">
                                                     <div className="how-itemcart1">
-                                                        <img src="images/item-cart-04.jpg" alt="IMG" />
+                                                        <img src="images/products/item-cart-04.jpg" alt="IMG" />
                                                     </div>
                                                 </td>
                                                 <td className="column-2">Fresh Strawberries</td>
@@ -63,7 +70,7 @@ class Cart extends Component {
                                             <tr className="table_row">
                                                 <td className="column-1">
                                                     <div className="how-itemcart1">
-                                                        <img src="images/item-cart-05.jpg" alt="IMG" />
+                                                        <img src="images/products/item-cart-05.jpg" alt="IMG" />
                                                     </div>
                                                 </td>
                                                 <td className="column-2">Lightweight Jacket</td>
@@ -83,6 +90,7 @@ class Cart extends Component {
                                                 </td>
                                                 <td className="column-5">$ 16.00</td>
                                             </tr>
+                                            </tbody>
                                         </table>
                                     </div>
 

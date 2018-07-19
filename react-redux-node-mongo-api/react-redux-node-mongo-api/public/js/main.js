@@ -4,25 +4,25 @@
 
     /*[ Load page ]
     ===========================================================*/
-    $(".animsition").animsition({
-        inClass: 'fade-in',
-        outClass: 'fade-out',
-        inDuration: 1500,
-        outDuration: 800,
-        linkElement: '.animsition-link',
-        loading: true,
-        loadingParentElement: 'html',
-        loadingClass: 'animsition-loading-1',
-        loadingInner: '<div class="loader05"></div>',
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: [ 'animation-duration', '-webkit-animation-duration'],
-        overlay : false,
-        overlayClass : 'animsition-overlay-slide',
-        overlayParentElement : 'html',
-        transition: function(url){ window.location.href = url; }
-    });
+    // $(".animsition").animsition({
+    //     inClass: 'fade-in',
+    //     outClass: 'fade-out',
+    //     inDuration: 1500,
+    //     outDuration: 800,
+    //     linkElement: '.animsition-link',
+    //     loading: true,
+    //     loadingParentElement: 'html',
+    //     loadingClass: 'animsition-loading-1',
+    //     loadingInner: '<div class="loader05"></div>',
+    //     timeout: false,
+    //     timeoutCountdown: 5000,
+    //     onLoadEvent: true,
+    //     browser: [ 'animation-duration', '-webkit-animation-duration'],
+    //     overlay : false,
+    //     overlayClass : 'animsition-overlay-slide',
+    //     overlayParentElement : 'html',
+    //     transition: function(url){ window.location.href = url; }
+    // });
     
     /*[ Back to top ]
     ===========================================================*/
@@ -277,6 +277,27 @@
         $('.js-modal1').removeClass('show-modal1');
     });
 
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+		new SelectFx(el);
+	} );
 
+	jQuery('.selectpicker').selectpicker;
+
+
+	$('#menuToggle').on('click', function(event) {
+		$('body').toggleClass('open');
+	});
+
+	$('.search-trigger').on('click', function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		$('.search-trigger').parent('.header-left').addClass('open');
+	});
+
+	$('.search-close').on('click', function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		$('.search-trigger').parent('.header-left').removeClass('open');
+	});
 
 })(jQuery);
