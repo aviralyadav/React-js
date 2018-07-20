@@ -1,0 +1,824 @@
+{
+  "total": 55773,
+  "aggregations": {
+    "condition": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "certified pre-owned",
+          "doc_count": 5444
+        },
+        {
+          "key": "demo",
+          "doc_count": 3
+        },
+        {
+          "key": "new",
+          "doc_count": 27834
+        },
+        {
+          "key": "used",
+          "doc_count": 22476
+        },
+        {
+          "key": "used - cpo eligible",
+          "doc_count": 3
+        }
+      ]
+    },
+    "dateInStock": {
+      "buckets": [
+        {
+          "key": "Older than 30 days",
+          "to": 1523744806135,
+          "to_as_string": "1523744806135",
+          "doc_count": 55762
+        },
+        {
+          "key": "Less than 30 days",
+          "from": 1523744806135,
+          "from_as_string": "1523744806135",
+          "to": 1526336806135,
+          "to_as_string": "1526336806135",
+          "doc_count": 11
+        },
+        {
+          "key": "Less than 7 days",
+          "from": 1525732006135,
+          "from_as_string": "1525732006135",
+          "to": 1526336806135,
+          "to_as_string": "1526336806135",
+          "doc_count": 0
+        },
+        {
+          "key": "Next 7 days",
+          "from": 1526336806135,
+          "from_as_string": "1526336806135",
+          "to": 1526941606135,
+          "to_as_string": "1526941606135",
+          "doc_count": 0
+        }
+      ]
+    },
+    "year": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": 0,
+          "doc_count": 7
+        },
+        {
+          "key": 1968,
+          "doc_count": 1
+        },
+        {
+          "key": 1969,
+          "doc_count": 1
+        },
+        {
+          "key": 1971,
+          "doc_count": 1
+        },
+        {
+          "key": 1973,
+          "doc_count": 1
+        },
+        {
+          "key": 1974,
+          "doc_count": 1
+        },
+        {
+          "key": 1979,
+          "doc_count": 1
+        },
+        {
+          "key": 1981,
+          "doc_count": 1
+        },
+        {
+          "key": 1982,
+          "doc_count": 1
+        },
+        {
+          "key": 1983,
+          "doc_count": 1
+        },
+        {
+          "key": 1984,
+          "doc_count": 3
+        },
+        {
+          "key": 1985,
+          "doc_count": 2
+        },
+        {
+          "key": 1986,
+          "doc_count": 5
+        },
+        {
+          "key": 1987,
+          "doc_count": 2
+        },
+        {
+          "key": 1988,
+          "doc_count": 7
+        },
+        {
+          "key": 1989,
+          "doc_count": 4
+        },
+        {
+          "key": 1990,
+          "doc_count": 9
+        },
+        {
+          "key": 1991,
+          "doc_count": 14
+        },
+        {
+          "key": 1992,
+          "doc_count": 27
+        },
+        {
+          "key": 1993,
+          "doc_count": 45
+        },
+        {
+          "key": 1994,
+          "doc_count": 73
+        },
+        {
+          "key": 1995,
+          "doc_count": 116
+        },
+        {
+          "key": 1996,
+          "doc_count": 140
+        },
+        {
+          "key": 1997,
+          "doc_count": 279
+        },
+        {
+          "key": 1998,
+          "doc_count": 322
+        },
+        {
+          "key": 1999,
+          "doc_count": 500
+        },
+        {
+          "key": 2000,
+          "doc_count": 727
+        },
+        {
+          "key": 2001,
+          "doc_count": 837
+        },
+        {
+          "key": 2002,
+          "doc_count": 1078
+        },
+        {
+          "key": 2003,
+          "doc_count": 1196
+        },
+        {
+          "key": 2004,
+          "doc_count": 1370
+        },
+        {
+          "key": 2005,
+          "doc_count": 1525
+        },
+        {
+          "key": 2006,
+          "doc_count": 1570
+        },
+        {
+          "key": 2007,
+          "doc_count": 2101
+        },
+        {
+          "key": 2008,
+          "doc_count": 2061
+        },
+        {
+          "key": 2009,
+          "doc_count": 1680
+        },
+        {
+          "key": 2010,
+          "doc_count": 2645
+        },
+        {
+          "key": 2011,
+          "doc_count": 4052
+        },
+        {
+          "key": 2012,
+          "doc_count": 6043
+        },
+        {
+          "key": 2013,
+          "doc_count": 7063
+        },
+        {
+          "key": 2014,
+          "doc_count": 8157
+        },
+        {
+          "key": 2015,
+          "doc_count": 7977
+        },
+        {
+          "key": 2016,
+          "doc_count": 4117
+        },
+        {
+          "key": 2017,
+          "doc_count": 4
+        },
+        {
+          "key": 2018,
+          "doc_count": 1
+        }
+      ]
+    },
+    "price_advertised": {
+      "buckets": [
+        {
+          "key": "Under $30K",
+          "from": 0,
+          "to": 30000,
+          "doc_count": 35042
+        },
+        {
+          "key": "$30K - $60K",
+          "from": 30000,
+          "to": 60000,
+          "doc_count": 4182
+        },
+        {
+          "key": "$60K - $90K",
+          "from": 60000,
+          "to": 90000,
+          "doc_count": 34
+        },
+        {
+          "key": "Over $90K",
+          "from": 90000,
+          "doc_count": 14
+        }
+      ]
+    },
+    "color_interiorGeneric": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "-",
+          "doc_count": 4370
+        },
+        {
+          "key": "black",
+          "doc_count": 3143
+        },
+        {
+          "key": "blue",
+          "doc_count": 11
+        },
+        {
+          "key": "brown",
+          "doc_count": 80
+        },
+        {
+          "key": "gold",
+          "doc_count": 4
+        },
+        {
+          "key": "gray",
+          "doc_count": 6727
+        },
+        {
+          "key": "other",
+          "doc_count": 4310
+        },
+        {
+          "key": "red",
+          "doc_count": 10
+        },
+        {
+          "key": "tan",
+          "doc_count": 2572
+        },
+        {
+          "key": "teal",
+          "doc_count": 1
+        },
+        {
+          "key": "white",
+          "doc_count": 20
+        }
+      ]
+    },
+    "make": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "acura",
+          "doc_count": 332
+        },
+        {
+          "key": "audi",
+          "doc_count": 153
+        },
+        {
+          "key": "bentley",
+          "doc_count": 2
+        },
+        {
+          "key": "bmw",
+          "doc_count": 451
+        },
+        {
+          "key": "buick",
+          "doc_count": 217
+        },
+        {
+          "key": "cadillac",
+          "doc_count": 171
+        },
+        {
+          "key": "chevrolet",
+          "doc_count": 1478
+        },
+        {
+          "key": "chrysler",
+          "doc_count": 413
+        },
+        {
+          "key": "daewoo",
+          "doc_count": 1
+        },
+        {
+          "key": "dodge",
+          "doc_count": 617
+        },
+        {
+          "key": "eagle",
+          "doc_count": 2
+        },
+        {
+          "key": "fiat",
+          "doc_count": 12
+        },
+        {
+          "key": "ford",
+          "doc_count": 1791
+        },
+        {
+          "key": "geo",
+          "doc_count": 5
+        },
+        {
+          "key": "gmc",
+          "doc_count": 301
+        },
+        {
+          "key": "honda",
+          "doc_count": 10898
+        },
+        {
+          "key": "hummer",
+          "doc_count": 15
+        },
+        {
+          "key": "hyundai",
+          "doc_count": 499
+        },
+        {
+          "key": "infiniti",
+          "doc_count": 236
+        },
+        {
+          "key": "isuzu",
+          "doc_count": 23
+        },
+        {
+          "key": "jaguar",
+          "doc_count": 34
+        },
+        {
+          "key": "jeep",
+          "doc_count": 449
+        },
+        {
+          "key": "kia",
+          "doc_count": 291
+        },
+        {
+          "key": "lamborghini",
+          "doc_count": 1
+        },
+        {
+          "key": "land rover",
+          "doc_count": 25
+        },
+        {
+          "key": "lexus",
+          "doc_count": 629
+        },
+        {
+          "key": "lincoln",
+          "doc_count": 71
+        },
+        {
+          "key": "maybach",
+          "doc_count": 2
+        },
+        {
+          "key": "mazda",
+          "doc_count": 351
+        },
+        {
+          "key": "mercedes-benz",
+          "doc_count": 269
+        },
+        {
+          "key": "mercury",
+          "doc_count": 136
+        },
+        {
+          "key": "mg",
+          "doc_count": 1
+        },
+        {
+          "key": "mini",
+          "doc_count": 60
+        },
+        {
+          "key": "mitsubishi",
+          "doc_count": 193
+        },
+        {
+          "key": "nissan",
+          "doc_count": 1218
+        },
+        {
+          "key": "oldsmobile",
+          "doc_count": 79
+        },
+        {
+          "key": "other",
+          "doc_count": 7
+        },
+        {
+          "key": "plymouth",
+          "doc_count": 11
+        },
+        {
+          "key": "pontiac",
+          "doc_count": 244
+        },
+        {
+          "key": "porsche",
+          "doc_count": 18
+        },
+        {
+          "key": "ram",
+          "doc_count": 25
+        },
+        {
+          "key": "saab",
+          "doc_count": 37
+        },
+        {
+          "key": "saturn",
+          "doc_count": 207
+        },
+        {
+          "key": "scion",
+          "doc_count": 820
+        },
+        {
+          "key": "smart",
+          "doc_count": 15
+        },
+        {
+          "key": "subaru",
+          "doc_count": 183
+        },
+        {
+          "key": "suzuki",
+          "doc_count": 50
+        },
+        {
+          "key": "tesla",
+          "doc_count": 4
+        },
+        {
+          "key": "toyota",
+          "doc_count": 31778
+        },
+        {
+          "key": "volkswagen",
+          "doc_count": 415
+        },
+        {
+          "key": "volvo",
+          "doc_count": 153
+        },
+        {
+          "key": "willys",
+          "doc_count": 1
+        }
+      ]
+    },
+    "model": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "1 series",
+          "doc_count": 2
+        },
+        {
+          "key": "3 series",
+          "doc_count": 256
+        },
+        {
+          "key": "3 series gran turismo",
+          "doc_count": 2
+        },
+        {
+          "key": "3-series",
+          "doc_count": 1
+        },
+        {
+          "key": "323i",
+          "doc_count": 1
+        },
+        {
+          "key": "325ci",
+          "doc_count": 3
+        },
+        {
+          "key": "325i",
+          "doc_count": 3
+        },
+        {
+          "key": "328i",
+          "doc_count": 8
+        },
+        {
+          "key": "328i convertible",
+          "doc_count": 1
+        },
+        {
+          "key": "328i xdrive coupe",
+          "doc_count": 1
+        },
+        {
+          "key": "330i",
+          "doc_count": 1
+        },
+        {
+          "key": "330xi",
+          "doc_count": 1
+        },
+        {
+          "key": "335d",
+          "doc_count": 1
+        },
+        {
+          "key": "335i",
+          "doc_count": 5
+        },
+        {
+          "key": "5 series",
+          "doc_count": 52
+        },
+        {
+          "key": "528i",
+          "doc_count": 4
+        },
+        {
+          "key": "530i",
+          "doc_count": 1
+        },
+        {
+          "key": "535i",
+          "doc_count": 2
+        },
+        {
+          "key": "550i",
+          "doc_count": 1
+        },
+        {
+          "key": "6 series",
+          "doc_count": 7
+        },
+        {
+          "key": "7 series",
+          "doc_count": 19
+        },
+        {
+          "key": "7 series w/  v8, navigation, leather, moon roof, & pwr seats",
+          "doc_count": 1
+        },
+        {
+          "key": "740i",
+          "doc_count": 1
+        },
+        {
+          "key": "m3",
+          "doc_count": 3
+        },
+        {
+          "key": "m6",
+          "doc_count": 1
+        },
+        {
+          "key": "x1",
+          "doc_count": 6
+        },
+        {
+          "key": "x3",
+          "doc_count": 19
+        },
+        {
+          "key": "x3 2.5i",
+          "doc_count": 1
+        },
+        {
+          "key": "x3-series",
+          "doc_count": 1
+        },
+        {
+          "key": "x5",
+          "doc_count": 32
+        },
+        {
+          "key": "x5-series",
+          "doc_count": 2
+        },
+        {
+          "key": "x6",
+          "doc_count": 1
+        },
+        {
+          "key": "z3",
+          "doc_count": 1
+        },
+        {
+          "key": "z4",
+          "doc_count": 9
+        },
+        {
+          "key": "z4 roadster",
+          "doc_count": 1
+        }
+      ]
+    },
+    "trim": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "w/ leather, sunroof, pwr-seats, & alloys",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ nav, premium-pkg, leather, moonroof, & heated seats",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ navigation & sport-premium packages",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ premium package, leather, & sunroof",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ premium package, sunroof, & leather",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ premium pkg, leather, sunroof, dual power-heated seats, & pre",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ sport pkg, prem pkg, leather, sunroof, power-heated seats, &",
+          "doc_count": 1
+        },
+        {
+          "key": "w/ sport-pkg, prem-pkg, leather, & sunroof",
+          "doc_count": 1
+        }
+      ]
+    },
+    "color_exteriorGeneric": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "-",
+          "doc_count": 2799
+        },
+        {
+          "key": "black",
+          "doc_count": 3944
+        },
+        {
+          "key": "blue",
+          "doc_count": 1309
+        },
+        {
+          "key": "brown",
+          "doc_count": 128
+        },
+        {
+          "key": "burgundy",
+          "doc_count": 265
+        },
+        {
+          "key": "gold",
+          "doc_count": 684
+        },
+        {
+          "key": "gray",
+          "doc_count": 3647
+        },
+        {
+          "key": "green",
+          "doc_count": 632
+        },
+        {
+          "key": "orange",
+          "doc_count": 45
+        },
+        {
+          "key": "other",
+          "doc_count": 479
+        },
+        {
+          "key": "purple",
+          "doc_count": 25
+        },
+        {
+          "key": "red",
+          "doc_count": 1726
+        },
+        {
+          "key": "silver",
+          "doc_count": 4525
+        },
+        {
+          "key": "tan",
+          "doc_count": 439
+        },
+        {
+          "key": "teal",
+          "doc_count": 13
+        },
+        {
+          "key": "white",
+          "doc_count": 4287
+        },
+        {
+          "key": "yellow",
+          "doc_count": 41
+        }
+      ]
+    },
+    "status": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "active",
+          "doc_count": 35841
+        },
+        {
+          "key": "in progress",
+          "doc_count": 11430
+        },
+        {
+          "key": "wholesale",
+          "doc_count": 8502
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:8092/api/search/aggregations?fields=year,make,status,condition,color_exteriorGeneric,color_interiorGeneric,price_advertised,dateInStock"
+    }
+  ]
+}

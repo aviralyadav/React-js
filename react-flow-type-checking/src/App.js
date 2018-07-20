@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 // import { } from 'react-dom';
 import './App.css';
-
-type TestProps = {
-  str: string,
-  num?: number   ///option to provide 
-}
-
-type TestState = {
-  message: string
-}
+import Button  from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import Test from './Test';
+import ConfirmationDialog from './demo';
+import ConfirmationDialogFull from './demo-selection-full';
+import NewTest from './NewTest';
 
 type testFuncType = {
   name: string
@@ -25,38 +22,7 @@ function TestFunc(props: testFuncType) {
 //   name: 'abhi'
 // }
 
-class Test extends Component<TestProps, TestState> {  //  first param is props type and secpnd is state type <propsType, stateType>
-  state = {
-    message: 'hello'
-  }
-  // static defaultProps = {
-  //   str: 'abc'
-  // }
-  componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', nextProps, this.props);
-  }
-  shouldComponentUpdate(){
-    console.log('shouldComponentUpdate - test');
-    return true;
-  }
-  componentWillUpdate(){
-    console.log('componentWillUpdate - test');
-  }
-  componentDidUpdate(){
-    console.log('componentDidUpdate - test');
-  }
 
-  render() {
-    console.log('render - test')
-    return (
-      <div>
-        <h3>{this.props.str}</h3>
-        <h3>{this.props.num}</h3>
-        <h3>{this.state.message}</h3>
-      </div>
-    );
-  }
-}
 
 class App extends Component<{}> {
   constructor(props){
@@ -80,7 +46,7 @@ class App extends Component<{}> {
   }
   shouldComponentUpdate(){
     console.log('shouldComponentUpdate');
-    return true;
+    return true;this
   }
   componentWillUpdate(){
     console.log('componentWillUpdate');
@@ -89,21 +55,35 @@ class App extends Component<{}> {
     console.log('componentDidUpdate');
   }
   render() {
-    console.log('render');
+    console.log('render', this.props);
+    const { classes } = this.props;
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome </h1>
         </header>
-        <Test str={'test'} />
+        <NewTest />
+        {/* <Test str={'test'} /> */}
         {/* <Test /> for default prop value */}
-        <TestFunc name={'abhi'} />
+        {/* <TestFunc name={'abhi'} /> */}
         <p>{this.state.content}</p>
-        <button onClick={this.setNext} >Click</button>
+        <Button color="primary" className={classes.button} variant="raised" onClick={this.setNext} >Click</Button>
+        {/* <ConfirmationDialog /> */}
+        <hr/>
+        <ConfirmationDialogFull />
       </div>
     );
   }
 }
 
-export default App;
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
+
+export default withStyles(styles)(App);
