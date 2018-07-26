@@ -9,15 +9,17 @@ import Test from './Test';
 import ConfirmationDialog from './demo';
 import ConfirmationDialogFull from './demo-selection-full';
 import NewTest from './NewTest';
+import {FilterDrawerBody} from './filter-drawer-body-component';
+import DemoTest from './DemoTest';
 
-type testFuncType = {
-  name: string
-}
+// type testFuncType = {
+//   name: string
+// }
 
-function TestFunc(props: testFuncType) {
+// function TestFunc(props: testFuncType) {
 
-  return <div>{props.name}</div>;
-}
+//   return <div>{props.name}</div>;
+// }
 // TestFunc.defaultProps = {   ////default props for stateless component 
 //   name: 'abhi'
 // }
@@ -27,35 +29,35 @@ function TestFunc(props: testFuncType) {
 class App extends Component<{}> {
   constructor(props){
     super(props);
-    console.log('constructor');
+    // console.log('constructor');
   }
   state = {
     content: ''
   }
-  componentWillMount() {
-    console.log('componentWillMount');
-  }
-  componentDidMount() {
-    console.log('componentDidMount');
-  }
-  componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', nextProps);
-  }
-  setNext = () => {
-    this.setState({content: 'Hello content'});
-  }
-  shouldComponentUpdate(){
-    console.log('shouldComponentUpdate');
-    return true;this
-  }
-  componentWillUpdate(){
-    console.log('componentWillUpdate');
-  }
-  componentDidUpdate(){
-    console.log('componentDidUpdate');
-  }
+  // componentWillMount() {
+  //   console.log('componentWillMount');
+  // }
+  // componentDidMount() {
+  //   console.log('componentDidMount');
+  // }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log('componentWillReceiveProps', nextProps);
+  // }
+  // setNext = () => {
+  //   this.setState({content: 'Hello content'});
+  // }
+  // shouldComponentUpdate(){
+  //   console.log('shouldComponentUpdate');
+  //   return true;this
+  // }
+  // componentWillUpdate(){
+  //   console.log('componentWillUpdate');
+  // }
+  // componentDidUpdate(){
+  //   console.log('componentDidUpdate');
+  // }
   render() {
-    console.log('render', this.props);
+    // console.log('render', this.props);
     const { classes } = this.props;
     return (
       <div className="App">
@@ -63,15 +65,18 @@ class App extends Component<{}> {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome </h1>
         </header>
-        <NewTest />
+        {/* <DemoTest /> */}
+        {/* <AppBar /> */}
+        {/* <NewTest /> */}
         {/* <Test str={'test'} /> */}
         {/* <Test /> for default prop value */}
         {/* <TestFunc name={'abhi'} /> */}
-        <p>{this.state.content}</p>
-        <Button color="primary" className={classes.button} variant="raised" onClick={this.setNext} >Click</Button>
+        {/* <p>{this.state.content}</p> */}
+        {/* <Button color="primary" className={classes.button} variant="raised" onClick={this.setNext} >Click</Button> */}
         {/* <ConfirmationDialog /> */}
-        <hr/>
-        <ConfirmationDialogFull />
+        {/* <hr/> */}
+        {/* <ConfirmationDialogFull /> */}
+        <FilterDrawerBody />
       </div>
     );
   }

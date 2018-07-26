@@ -1,0 +1,6 @@
+@import '../../../../theme/scss/typography.scss';
+
+.inputNote {
+  composes: caption;
+  padding-top: 6px;
+}

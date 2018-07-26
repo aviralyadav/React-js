@@ -1,0 +1,25 @@
+@import '../../../theme/scss/typography';
+
+.rawTextInput {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  composes: body1;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+  outline: none;
+  background-color: rgba(0,0,0,0);
+  cursor: inherit;
+  WebkitTapHighlightColor: rgba(0,0,0,0); // Remove mobile color flashing (deprecated style).
+  appearance: textfield; // Improve type search style.
+  height: 34px;
+}
+
+.textarea {
+  composes: input;
+  box-sizing: border-box;
+}

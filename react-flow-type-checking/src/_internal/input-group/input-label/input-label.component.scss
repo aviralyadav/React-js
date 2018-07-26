@@ -1,0 +1,15 @@
+@mixin inputLabelStyles(){
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inputLabel {
+  @include inputLabelStyles();
+  margin-bottom: 2px;
+}
+
+.inputLabelLegacy {
+  @include inputLabelStyles();
+}

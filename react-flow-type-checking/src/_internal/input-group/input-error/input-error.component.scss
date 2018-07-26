@@ -1,0 +1,7 @@
+@import '../../../../theme/scss/typography.scss';
+
+.inputError {
+  composes: caption;
+  padding-top: 6px;
+  color: $red-500;
+}

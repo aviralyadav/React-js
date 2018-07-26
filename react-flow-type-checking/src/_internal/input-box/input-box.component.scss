@@ -1,0 +1,10 @@
+@import '../../../theme/scss/typography.scss';
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: $white;
+  border: 1px solid $grey-300;
+}

@@ -1,0 +1,4 @@
+// Use CSS rule since inline style on the menu.listStyle causes the DropDownMenu to loose focus!
+div[role="presentation"] > div[role="menu"] {
+  padding: 8px 0 !important;
+}

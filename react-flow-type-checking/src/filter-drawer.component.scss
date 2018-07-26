@@ -1,0 +1,125 @@
+@import '../theme/scss/colors';
+
+@mixin buttonStyles($legacy: false){
+  composes: button from '../theme/scss/typography.scss';
+
+  @if $legacy {
+    border-radius: 0 !important;
+    border: 1px solid $neutral-400 !important;
+  } @else {
+    border: 1px solid rgba(0,0,0,0) !important;
+    border-radius: 2px !important;
+  }
+  font-size: 14px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  padding: 0 15px !important;
+  cursor: pointer !important;
+
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+@mixin buttonColors($backgroundColor, $labelColor, $hoverColor: null, $disabledColor:null, $disabledLabelColor:null) {
+  background-color: $backgroundColor !important;
+  color: $labelColor !important;
+  @if $hoverColor {
+    &:hover {
+      background-color: $hoverColor !important;
+      &:focus {
+        background-color: $backgroundColor !important;
+      }
+    }
+  }
+  @if $disabledColor or $disabledLabelColor {
+    &:disabled {
+      background-color: $disabledColor !important;
+      color: $disabledLabelColor !important;
+    }
+  }
+}
+
+.action {
+  @include buttonStyles();
+  @include buttonColors($blue-500,$white, $blue-600,$blue-100);
+}
+
+// .actionLegacy {
+//   @include buttonStyles(true);
+//   @include buttonColors($blue-500, $white, $blue-600, $blue-100);
+// }
+//
+// .cancel {
+//   @include buttonStyles();
+//   @include buttonColors($white, $theme-500, $neutral-300,$neutral-600,$white);
+// }
+//
+// .cancelLegacy {
+//   @include buttonStyles(true);
+//   @include buttonColors($white, $theme-500, $neutral-300,$neutral-600,$white);
+// }
+//
+// .create {
+//   @include buttonStyles();
+//   @include buttonColors($blue-50, $blue-600, $blue-100,$blue-200);
+// }
+//
+// .createLegacy {
+//   @include buttonStyles(true);
+//   @include buttonColors($blue-50, $blue-600, $blue-100,$blue-200);
+// }
+//
+// .danger {
+//   @include buttonStyles();
+//   @include buttonColors($red-500, $white, $red-600, $red-100);
+// }
+//
+// .dangerSecondary {
+//   @include buttonStyles();
+//   @include buttonColors(rgba(0,0,0,0), $red-500, $grey-200, rgba(0,0,0,0), $grey-400);
+// }
+//
+// .save {
+//   @include buttonStyles();
+//   @include buttonColors($green-500, $white, $green-600, $green-100);
+// }
+//
+// .saveLegacy {
+//   @include buttonStyles(true);
+//   @include buttonColors($green-500, $white, $green-600, $green-100);
+// }
+
+.secondary {
+  @include buttonStyles();
+  @include buttonColors(rgba(0,0,0,0), $blue-600, $grey-200, rgba(0,0,0,0), $grey-400);
+}
+
+// .utility {
+//   @include buttonStyles();
+//   @include buttonColors($grey-900, $white, $grey-800, $grey-700);
+// }
+//
+// .warning {
+//   @include buttonStyles();
+//   @include buttonColors($yellow-500, $white, $yellow-600, $yellow-100);
+// }
+//
+// .headerBarPrimary {
+//   @include buttonStyles();
+//   border-radius: 0 !important;
+//   height: 100% !important;
+//   margin-left: 20px;
+//   @include buttonColors($green-500, $white, $green-600, $grey-300);
+// }
+//
+// .headerBarSecondary {
+//   @include buttonStyles();
+//   border-radius: 0 !important;
+//   height: 100% !important;
+//   @include buttonColors(rgba(0,0,0,0), $white, null, rgba(0,0,0,0), $grey-400);
+// }
+//
+// .content {
+//   position: relative;
+// }

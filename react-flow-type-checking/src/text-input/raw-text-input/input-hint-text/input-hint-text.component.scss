@@ -1,0 +1,12 @@
+@import '../../../../theme/scss/typography';
+
+.inputHintText {
+  composes: body1;
+  position: absolute;
+  color: $grey-400;
+  pointer-events: none;
+  padding-top: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
