@@ -19,6 +19,8 @@ type ExternalProps = {
   maximumLengthOfYear: number,
   inRow?: boolean,
   isDataAvailable: boolean,
+  placeHolderFirst?: string,
+  placeHolderSecond?: string
 };
 type Props = ExternalProps;
 
@@ -82,6 +84,7 @@ export class InputYearRange extends React.Component<Props> {
               id: this.props.id,
             }}
           >
+          {this.props.placeHolderFirst ? <option value="" selected disabled>{this.props.placeHolderFirst}</option> : null }
             {this.generateYearsOptionsForYearComponent()}
           </Select>
         </FormControl>
@@ -96,6 +99,7 @@ export class InputYearRange extends React.Component<Props> {
               id: this.props.id,
             }}
           >
+          {this.props.placeHolderSecond ? <option value="" selected disabled>{this.props.placeHolderSecond}</option> : null }
             {this.generateYearsOptionsForYearComponent()}
           </Select>
         </FormControl>

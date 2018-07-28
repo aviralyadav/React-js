@@ -61,10 +61,10 @@ class App extends Component<{}> {
     const { classes } = this.props;
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome </h1>
-        </header>
+        </header> */}
         {/* <DemoTest /> */}
         {/* <AppBar /> */}
         {/* <NewTest /> */}

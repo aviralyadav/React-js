@@ -31,11 +31,12 @@ import {FilterDrawerFooter} from './filter-drawer-footer-component';
 
 //import {ExpansionPanel} from '../old-components/expansion-panel/expansion-panel.component';
 
-type ExternalProps = {
+export type ExternalProps = {
   leftIcon?: Element<MdiReactIconProps>,
   leftButton?: Element<Button>,
   rightButton?: Element<Button>,
   isOpen: boolean,
+  onClick: () => void
 };
 
 export type InternalProps = {
@@ -57,7 +58,7 @@ class FilterDrawerBodyComponent extends React.Component<FilterDrawerBodyProps>{
   
   showIcon = (index) => {
     console.log(index);
-    this.setState({show: !this.state.show, iconValue: index});
+    return this.setState({show: !this.state.show, iconValue: index});
   }
   render(){
     const {classes,
@@ -103,6 +104,8 @@ class FilterDrawerBodyComponent extends React.Component<FilterDrawerBodyProps>{
                   isDataAvailable
                   isNative
                   maximumLengthOfYear={3}
+                  placeHolderFirst={'Start'}
+                  placeHolderSecond={'End'}
                 />;
         default: {
          return  item.data.buckets.map((innerItem, ind)=>{
@@ -149,7 +152,6 @@ class FilterDrawerBodyComponent extends React.Component<FilterDrawerBodyProps>{
 
         {renderItems}
         </div>
-        
         <FilterDrawerFooter />
     </div>
   );
@@ -186,6 +188,7 @@ const styles = (theme: Object) => {
   };
 };
 
-export const FilterDrawerBody = withStyles(styles)(
+export const FilterDrawerBody = withStyles(styles)
+(
   FilterDrawerBodyComponent
 );

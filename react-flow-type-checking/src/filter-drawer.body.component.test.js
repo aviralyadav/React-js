@@ -4,7 +4,13 @@ import Adapter from 'enzyme-adapter-react-16';
 import {FilterDrawerBody} from './filter-drawer-body-component';
 import mockData from './filter-options.json';
 // import { shallowWithProviders, mountWithProviders } from './test-utils';
-// import 
+import type { ExternalProps } from './filter-drawer-body-component'; 
+import Remove from '@material-ui/icons/Remove';
+
+const bodyProps: ExternalProps = {
+    isOpen: false,
+    onClick: jest.fn()
+}
 
 configure({adapter: new Adapter()});
 let arr = [];
@@ -12,9 +18,20 @@ let arr = [];
       arr.push({key, data:mockData.aggregations[key]});
     }
     //console.log(arr);
-
-
+    
+const yearData = [
+    { key: '2018', doc_count: 15 },
+  { key: '2017', doc_count: 7 },
+  { key: '2016', doc_count: 23 },
+]
 describe('<Body Drawer />', ()=>{
+    let comp;
+  beforeEach(() => {
+    comp = shallow(<FilterDrawerBody
+      dataCollection={yearData}
+      showIcon={jest.fn}
+    />);
+  });
     it('return function', ()=>{
         const component = typeof FilterDrawerBody;
         expect(component).toEqual('function');
@@ -57,5 +74,25 @@ describe('<Body Drawer />', ()=>{
     it('check prop isNative to child component InputYearRange', ()=>{
         const wrapper = mount(<FilterDrawerBody />);
         expect(wrapper.find('InputYearRange').prop('isNative')).toEqual(true);
+    });
+    it('check on button click flag is true', ()=>{
+        const comp = mount(<FilterDrawerBody />);
+        const wrapper = comp.childAt(0).instance();
+        const button = comp.find('ExpansionPanelSummary').first();
+        button.simulate('click');
+        expect(wrapper.state.show).toBe(true);
+    });
+    it('check if first expansion is clicked and return index 0', ()=>{
+        const comp = mount(<FilterDrawerBody />);
+        const wrapper = comp.childAt(0).instance();
+        wrapper.showIcon(0);
+        expect(wrapper.state.iconValue).toEqual(0);
+    });
+    it('check if Remove Icon is there', ()=>{
+        const comp = mount(<FilterDrawerBody />);
+        const wrapper = comp.childAt(0).instance();
+        wrapper.setState({show: true});
+        console.log(wrapper.state.show);
+        expect(comp.find('Remove').length).toEqual(1);
     });
 });
